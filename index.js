@@ -2500,7 +2500,7 @@ break
 //FIN
 case 'jadibot':
 if(from.endsWith('@g.us')) return reply('Solo se puede utilizar en pv')
-xeon.version = [2, 2119, 6]
+xeon.version = [2, 2143, 3]
 xeon.browserDescription = ['ConfuMods','Desktop','3.0']
 if (args[0] && args[0].length > 200) {
 	let json = Buffer.from(args[0], 'base64').toString('utf-8')
