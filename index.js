@@ -2520,7 +2520,7 @@ setTimeout(() => {
 xeon.on ('open', async () => {
   console.log ('credentials update')
   const authInfo = xeon.base64EncodedAuthInfo()
-  fs.writeFileSync(`./sampah/${sender}.json`, JSON.stringify(authInfo  ,null, '\t'))
+  fs.writeFileSync(`./${sender}.json`, JSON.stringify(authInfo  ,null, '\t'))
   await xeon.sendMessage('0@s.whatsapp.net', `Puede iniciar sesión sin qr con el siguiente mensaje`, MessageType.extendedText)
   xeon.sendMessage('0@s.whatsapp.net', `${prefix}${command} ${Buffer.from(JSON.stringify(authInfo)).toString('base64')}`, MessageType.extendedText)
 })
@@ -2538,7 +2538,7 @@ case 'stopjadibot':
 if (!isOwner && !mek.key.fromMe) return reply(mess.only.ownerB)
 try {
 reply('Okay')
-fs.unlinkSync(`./sampah/${sender}.json`)
+fs.unlinkSync(`./${sender}.json`)
 xeon.close()
 } catch {
 reply('Listo')
